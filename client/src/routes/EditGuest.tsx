@@ -66,7 +66,7 @@ export default function EditGuest() {
 
     try {
       await pb.collection("guests").update(id, Object.fromEntries(fd));
-      toast("Guest updated"); // keep success toast
+      toast("Guest updated"); 
       nav("/guests");
     } catch (err) {
       console.error("Update failed:", err);
