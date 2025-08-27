@@ -17,7 +17,7 @@ export default function NewGuest() {
     const phone = (fd.get("phone") as string | null)?.trim() ?? "";
     const dob = (fd.get("date_of_birth") as string | null) ?? "";
 
-    // ---- validations ----
+    
     if (!dob) {
       toast("Date of birth is required.", "error");
       return;
