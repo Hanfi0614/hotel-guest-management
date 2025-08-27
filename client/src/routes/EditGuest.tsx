@@ -70,8 +70,7 @@ export default function EditGuest() {
       nav("/guests");
     } catch (err) {
       console.error("Update failed:", err);
-      // remove error toast if you want absolute silence:
-      // toast("Update failed", "error");
+     
     }
   }
 
