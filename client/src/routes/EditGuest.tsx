@@ -5,7 +5,7 @@ import type { Guest } from "../types";
 import { useToast } from "../components/Toaster";
 
 function todayStr() {
-  return new Date().toISOString().slice(0, 10); // yyyy-mm-dd
+  return new Date().toISOString().slice(0, 10); 
 }
 
 export default function EditGuest() {
@@ -13,9 +13,9 @@ export default function EditGuest() {
   const nav = useNavigate();
   const [g, setG] = useState<Guest | null>(null);
   const [loadErr, setLoadErr] = useState(false);
-  const toast = useToast(); // keep for success update
+  const toast = useToast(); 
 
-  // ---------- Load guest once (no error toast) ----------
+
   useEffect(() => {
     if (!id) return;
     let cancelled = false;
@@ -26,7 +26,7 @@ export default function EditGuest() {
         if (!cancelled) setG(rec);
       } catch (err) {
         console.error("Failed to load guest:", err);
-        if (!cancelled) setLoadErr(true); // no toast
+        if (!cancelled) setLoadErr(true); 
       }
     })();
 
@@ -34,7 +34,7 @@ export default function EditGuest() {
       cancelled = true;
     };
   }, [id]);
-  // ------------------------------------------------------
+ 
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -44,18 +44,16 @@ export default function EditGuest() {
     const phone = (fd.get("phone") as string | null)?.trim() ?? "";
     const dob = (fd.get("date_of_birth") as string | null) ?? "";
 
-    // Validations
+   
     if (!dob) {
-      // no error toast requested? if you still want inline, you can add state.
-      // keeping a small toast here is usually ok, but remove if you want total silence:
-      // toast("Date of birth is required.", "error"); return;
+      
       return;
     }
     {
       const d = new Date(dob + "T00:00:00");
       const now = new Date();
       if (Number.isNaN(d.getTime()) || d > now) {
-        // toast("Date of birth must be a valid past date.", "error"); return;
+       
         return;
       }
     }
