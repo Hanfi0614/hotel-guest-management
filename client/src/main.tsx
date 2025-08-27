@@ -11,7 +11,7 @@ import { ToastProvider } from "./components/Toaster";
 
 const router = createBrowserRouter([
   {
-    element: <Shell />, // ✅ global navbar here
+    element: <Shell />, 
     children: [
       { path: "/", element: <Home /> },
       { path: "/guests", element: <Guests /> },
