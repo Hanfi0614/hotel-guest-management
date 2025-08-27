@@ -1,77 +1,96 @@
-# Hotel Guest Management – Starter
+# Hotel Guest Management – Final Mini Project
 
-A minimal, ready-to-run starter for the **Guest Management System** using **React + TypeScript + Vite + Tailwind** (client) and **PocketBase** (server).
+A complete **Hotel Guest Management System** built with:
+- **Frontend:** React + TypeScript + Vite + TailwindCSS
+- **Backend:** PocketBase
 
-## Project Structure
+
+
+## ✨ Features
+- Add, Edit, Delete, View guests
+- Search & filter guest list
+- Phone must be **10 digits**
+- Date of Birth is **required** (must be a past date)
+- Toast notifications for actions
+- Navy theme (`#111154`)
+- Confirmation modal before delete
+- Top navigation bar (Home / Guests)
+
+
+
+## 📂 Project Structure
 ```
-/hotel-guest-management
-  /server           # PocketBase backend files (binary not included)
-  /client           # React + TS + Vite frontend
-  README.md
+hotel-guest-management/
+├─ client/   # React app
+├─ server/   # PocketBase backend
+└─ README.md
 ```
+
+
+
+## 🗄 Backend (PocketBase)
+
+Run PocketBase:
+
+```bash
+cd server
+./pocketbase serve     # Windows: .\pocketbase.exe serve
+```
+
+- Admin UI: [http://127.0.0.1:8090/_/](http://127.0.0.1:8090/_/)
+- REST API: [http://127.0.0.1:8090/api/](http://127.0.0.1:8090/api/)
+
+### Admin Credentials (for evaluation)
+```
+Email:    mohamedhanfi0614@gmail.com
+Password: @hanfi2000
+```
+
+### Guests Collection Fields
+- `first_name` (text, required)  
+- `last_name` (text, required)  
+- `email` (email, required)  
+- `phone` (text)  
+- `address` (text, optional)  
+- `date_of_birth` (date)  
 
 ---
 
-## 1) Backend (PocketBase)
+## 💻 Frontend (React + Vite)
 
-1. Download PocketBase for your OS: https://pocketbase.io/
-2. Place the binary inside `server/` and run:
-   ```bash
-   cd server
-   ./pocketbase serve
-   # Admin UI: http://127.0.0.1:8090/_/
-   ```
+Run the React app:
 
-3. In the Admin UI:
-   - Create a collection **guests** with fields:
-     - `first_name` (text, required)
-     - `last_name`  (text, required)
-     - `email`      (email, required, unique)
-     - `phone`      (text)
-     - `address`    (text)
-     - `date_of_birth` (date)
-     - *Note:* `id` and `created` are auto-generated
-   - API Rules (for this assignment only): allow `list`, `view`, `create`, `update`, `delete` to **true**.
-   - Add 3–5 sample guest records.
-
-> Optionally, import `server/guests.pbschema.json` to pre-create the collection (Admin UI → Settings → Import collection).
-
----
-
-## 2) Frontend (React + TS + Vite)
-
-### Prerequisites
-- Node.js 18+ and npm
-
-### Setup & Run
 ```bash
 cd client
 npm install
-npm run dev   # http://localhost:5173
+npm run dev
 ```
 
-If your PocketBase is running on a different URL, set it via `.env`:
+Open in browser: [http://localhost:5173](http://localhost:5173)
+
+If PocketBase runs on a different URL, create `client/.env`:
+
 ```
 VITE_PB_URL=http://127.0.0.1:8090
 ```
 
-### Routes
-- `/guests` – list + search + delete
-- `/guests/new` – create
-- `/guests/:id` – view/edit
 
----
 
-## 3) Git
+## 🔗 Routes
+- `/` → Home  
+- `/guests` → List, Search, Delete  
+- `/guests/new` → Add new guest  
+- `/guests/:id` → Edit guest  
+
+
+
+## 📝 Git Workflow
 ```bash
-cd /path/to/hotel-guest-management
 git init
 git add .
-git commit -m "init: pocketbase + react-ts + tailwind + basic CRUD"
+git commit -m "Initial commit: Hotel Guest Management"
+git branch -M main
+git remote add origin https://github.com/Hanfi0614/hotel-guest-management.git
+git push -u origin main
 ```
 
----
-
-## Notes
-- This starter intentionally skips auth per requirements.
-- Do **not** expose real credentials publicly in production repos.

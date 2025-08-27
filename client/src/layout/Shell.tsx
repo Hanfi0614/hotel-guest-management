@@ -21,7 +21,7 @@ export default function Shell() {
         </nav>
       </header>
 
-      {/* Page content */}
+      
       <main className="flex-1">
         <Outlet />
       </main>
