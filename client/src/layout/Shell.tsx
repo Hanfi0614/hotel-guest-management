@@ -10,7 +10,8 @@ function linkCls({ isActive }: { isActive: boolean }) {
 export default function Shell() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Global Top Navbar */}
+      
+      
       <header className="bg-navy-dark shadow-md sticky top-0 z-50">
         <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
           <NavLink to="/" className={linkCls}>Home</NavLink>
