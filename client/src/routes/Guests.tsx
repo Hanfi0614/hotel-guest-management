@@ -123,7 +123,7 @@ export default function Guests() {
         </table>
       </div>
 
-      {/* Confirm dialog */}
+      
       <ConfirmDialog
         open={confirmOpen}
         title="Delete guest?"

@@ -13,6 +13,7 @@ export default function Home() {
             to="/guests"
             className="rounded-xl border shadow-sm hover:shadow-md transition-all bg-white"
           >
+            
             <div className="p-6 text-center">
               <h2 className="text-xl font-semibold text-navy-dark mb-4">
                 Guests
