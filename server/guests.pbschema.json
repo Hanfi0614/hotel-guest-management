@@ -1,0 +1,54 @@
+{
+  "name": "guests",
+  "type": "base",
+  "schema": [
+    {
+      "name": "first_name",
+      "type": "text",
+      "required": true,
+      "unique": false,
+      "options": {}
+    },
+    {
+      "name": "last_name",
+      "type": "text",
+      "required": true,
+      "unique": false,
+      "options": {}
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "required": true,
+      "unique": true,
+      "options": {}
+    },
+    {
+      "name": "phone",
+      "type": "text",
+      "required": false,
+      "unique": false,
+      "options": {}
+    },
+    {
+      "name": "address",
+      "type": "text",
+      "required": false,
+      "unique": false,
+      "options": {}
+    },
+    {
+      "name": "date_of_birth",
+      "type": "date",
+      "required": false,
+      "unique": false,
+      "options": {}
+    }
+  ],
+  "indexes": [],
+  "listRule": "true",
+  "viewRule": "true",
+  "createRule": "true",
+  "updateRule": "true",
+  "deleteRule": "true"
+}
