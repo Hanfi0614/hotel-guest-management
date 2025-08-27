@@ -10,14 +10,14 @@ export default function Guests() {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [pendingId, setPendingId] = useState<string | null>(null);
 
-  // Load once (no toast spam)
+  
   useEffect(() => {
   pb.collection("guests").getFullList<Guest>({ sort: "-created" })
     .then(setGuests)
     .catch(() => {
-      console.error("Failed to load guests"); // optional: can remove this too
+      console.error("Failed to load guests"); 
     });
-}, []); // ✅ removed toast, removed dependency
+}, []); 
 
 
   const filtered = useMemo(() => {
