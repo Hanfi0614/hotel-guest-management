@@ -58,7 +58,7 @@ export default function EditGuest() {
       }
     }
     if (phone && !/^\d{10}$/.test(phone)) {
-      // toast("Phone must be exactly 10 digits (numbers only).", "error"); return;
+      
       return;
     }
 

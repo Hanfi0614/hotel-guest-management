@@ -64,6 +64,8 @@ Run the React app:
 cd client
 npm install
 npm run dev
+npm install @tanstack/react-query
+npm install @tanstack/react-query-devtools
 ```
 
 Open in browser: [http://localhost:5173](http://localhost:5173)
