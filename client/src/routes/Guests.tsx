@@ -10,7 +10,7 @@ export default function Guests() {
   const toast = useToast();
   const queryClient = useQueryClient();
 
-  // Fetch guests with pagination
+  
   const { data, isLoading, isError } = useQuery({
     queryKey: ["guests"],
     queryFn: async () => {
@@ -18,7 +18,7 @@ export default function Guests() {
         sort: "-created",
       });
     },
-    staleTime: 1000 * 60, // 1 minute cache
+    staleTime: 1000 * 60, 
   });
 
   async function remove(id: string) {
@@ -38,7 +38,7 @@ export default function Guests() {
     <div className="max-w-6xl mx-auto p-6 space-y-4">
       <h1 className="text-2xl font-bold text-navy-dark text-center">Guests List</h1>
 
-      {/* Top toolbar with Add Guest button */}
+      
       <div className="flex items-center justify-end">
         <Link
           to="/guests/new"
