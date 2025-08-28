@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         navy: {
-          dark: "#111154", // your custom dark navy blue
+          dark: "#111154", 
         },
       },
     },
