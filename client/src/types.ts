@@ -5,6 +5,6 @@ export type Guest = {
   email: string;
   phone?: string;
   address?: string;
-  date_of_birth?: string; // ISO date
+  date_of_birth?: string; 
   created: string;
 };
