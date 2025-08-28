@@ -1,8 +1,8 @@
-/// <reference path="../pb_data/types.d.ts" />
+ <reference path="../pb_data/types.d.ts" />
 migrate((app) => {
   const collection = app.findCollectionByNameOrId("pbc_2047001084")
 
-  // update collection data
+  
   unmarshal({
     "listRule": ""
   }, collection)
@@ -11,7 +11,7 @@ migrate((app) => {
 }, (app) => {
   const collection = app.findCollectionByNameOrId("pbc_2047001084")
 
-  // update collection data
+  
   unmarshal({
     "listRule": null
   }, collection)

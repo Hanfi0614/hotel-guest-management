@@ -1,8 +1,8 @@
-/// <reference path="../pb_data/types.d.ts" />
+ <reference path="../pb_data/types.d.ts" />
 migrate((app) => {
   const collection = app.findCollectionByNameOrId("pbc_2047001084")
 
-  // add field
+  
   collection.fields.addAt(3, new Field({
     "exceptDomains": [],
     "hidden": false,
@@ -15,7 +15,7 @@ migrate((app) => {
     "type": "email"
   }))
 
-  // add field
+  
   collection.fields.addAt(4, new Field({
     "autogeneratePattern": "",
     "hidden": false,
@@ -31,7 +31,7 @@ migrate((app) => {
     "type": "text"
   }))
 
-  // add field
+  
   collection.fields.addAt(5, new Field({
     "autogeneratePattern": "",
     "hidden": false,
@@ -47,7 +47,7 @@ migrate((app) => {
     "type": "text"
   }))
 
-  // add field
+  
   collection.fields.addAt(6, new Field({
     "autogeneratePattern": "",
     "hidden": false,
@@ -63,7 +63,7 @@ migrate((app) => {
     "type": "text"
   }))
 
-  // update field
+  
   collection.fields.addAt(2, new Field({
     "autogeneratePattern": "",
     "hidden": false,
@@ -83,19 +83,19 @@ migrate((app) => {
 }, (app) => {
   const collection = app.findCollectionByNameOrId("pbc_2047001084")
 
-  // remove field
+ 
   collection.fields.removeById("email3885137012")
 
-  // remove field
+
   collection.fields.removeById("text1146066909")
 
-  // remove field
+
   collection.fields.removeById("text223244161")
 
-  // remove field
+  
   collection.fields.removeById("text1089581607")
 
-  // update field
+
   collection.fields.addAt(2, new Field({
     "autogeneratePattern": "",
     "hidden": false,
