@@ -12,12 +12,12 @@ import NewGuest from "./routes/NewGuest";
 import EditGuest from "./routes/EditGuest";
 import { ToastProvider } from "./components/Toaster";
 
-// Create a single QueryClient for the whole app
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // avoid refetch spam but still stay fairly fresh
-      staleTime: 60_000,        // 1 min
+      
+      staleTime: 60_000,        
       refetchOnWindowFocus: false,
       retry: 1,
     },
@@ -42,7 +42,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <ToastProvider>
         <RouterProvider router={router} />
       </ToastProvider>
-      {/* Optional devtools (remove in production) */}
+      
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </React.StrictMode>
