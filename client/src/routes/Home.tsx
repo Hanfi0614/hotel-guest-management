@@ -11,6 +11,7 @@ export default function Home() {
         <div className="mx-auto mt-2 h-1 w-24 rounded-full bg-navy-dark" />
 
         
+        
         <div className="mt-3">
           <Link
             to="/guests"
